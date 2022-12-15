@@ -4,3 +4,10 @@ function computerChoice(){
     console.log(choice[guessNumber]);
     return choice[guessNumber];
 }
+function playRound(playerSelection, computerSelection){
+    if(playerSelection==computerSelection){
+        return `Tie on ${playerSelection}`;
+    }else{
+        return 'Not yet known';
+    }
+}
