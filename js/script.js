@@ -69,7 +69,7 @@ function game(){
     let computer = 0;
     
     for(let i = 0; i<5; i++){
-        const round = playRound(prompt("Enter you choice"), computerChoice());
+        const round = playRound(prompt("Enter you choice").toUpperCase, computerChoice());
         if(round.includes("Won")){
             player+=1;
             alert(round);
