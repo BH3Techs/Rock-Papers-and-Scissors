@@ -13,7 +13,7 @@ function playRound(playerSelection, computerSelection){
         return `You Lose! ${computerSelection} beats ${playerSelection}`;
     }else if(computerSelection == choice[0] && playerSelection == choice[1]){
         //Computer chose PAPER
-        return `You lose`
+        return `You Lose! ${computerSelection} beats ${playerSelection}`
     }
 }
 console.log(playRound("ROCK",computerChoice));
