@@ -1,6 +1,5 @@
 const choice = ["ROCK", "PAPER", "SCISSOR"];
-let player;
-let comp;
+
 function computerChoice(){
     guessNumber = Math.floor(Math.random()*3);
     console.log(choice[guessNumber]);
@@ -28,8 +27,23 @@ function playRound(playerSelection, computerSelection){
                     return `You Won! ${playerSelection} beat ${computerSelection}.`;
             }
         }
-        
-        return `You Lose! ${computerSelection} beats ${playerSelection}`;
+        //The PAPER choice
+    }else if(computerSelection == choice[1] || playerSelection == choice[1]){
+        if(computerSelection == "PAPER"){
+            switch(playerSelection){
+                case choice[0]:
+                    return `You Lose! ${computerSelection} beat ${playerSelection}.`;
+                case choice[2]:
+                    return `You Won! ${playerSelection} beat ${computerSelection}.`;
+            }
+        }else{
+            switch(computerSelection){
+                case choice[0]:
+                    return `You Lose! ${computerSelection} beat ${playerSelection}.`;
+                case choice[2]:
+                    return `You Won! ${playerSelection} beat ${computerSelection}.`;
+            }
+        }
     }
 }
 console.log(playRound("ROCK",computerChoice));
