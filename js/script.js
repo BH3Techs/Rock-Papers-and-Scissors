@@ -11,3 +11,4 @@ function playRound(playerSelection, computerSelection){
         return 'Not yet known';
     }
 }
+console.log(playRound("ROCK",computerChoice));
