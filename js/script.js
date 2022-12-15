@@ -63,4 +63,27 @@ function playRound(playerSelection, computerSelection){
         }
     }
 }
+
+function game(){
+    let player = 0;
+    let computer = 0;
+
+    const playerChoice='';
+    
+    for(let i = 0; i<5; i++){
+        playerChoice = prompt("Enter you choice");
+        const round = playRound(playerChoice, computerChoice());
+        if(round.includes("Won")){
+            player+=1;
+        }else{
+            computer+=1;
+        }
+    }
+    if(player >computer){
+        return `Waaal you Won by ${player} and the Opponent has ${computer}`;
+    }else{
+        return `Ooooh sorry you lost Opponent got ${computer} and you got ${player}`;
+    }
+}
+
 console.log(playRound("ROCK",computerChoice()));
