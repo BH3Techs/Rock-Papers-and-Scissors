@@ -67,16 +67,17 @@ function playRound(playerSelection, computerSelection){
 function game(){
     let player = 0;
     let computer = 0;
-
-    const playerChoice='';
     
     for(let i = 0; i<5; i++){
-        playerChoice = prompt("Enter you choice");
-        const round = playRound(playerChoice, computerChoice());
+        const round = playRound(prompt("Enter you choice"), computerChoice());
         if(round.includes("Won")){
             player+=1;
-        }else{
+            alert(round);
+        }else if(round.includes("Lose")){
             computer+=1;
+            alert(round);
+        }else{
+            alert(round);
         }
     }
     if(player >computer){
