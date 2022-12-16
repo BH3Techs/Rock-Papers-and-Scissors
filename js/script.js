@@ -68,18 +68,18 @@ function game(){
     let player = 0;
     let computer = 0;
     
-    for(let i = 0; i<5; i++){
-        const round = playRound(prompt("Enter you choice").toUpperCase, computerChoice());
-        if(round.includes("Won")){
-            player+=1;
-            alert(round);
-        }else if(round.includes("Lose")){
-            computer+=1;
-            alert(round);
-        }else{
-            alert(round);
-        }
-    }
+    // for(let i = 0; i<5; i++){
+    //     const round = playRound(prompt("Enter you choice").toUpperCase, computerChoice());
+    //     if(round.includes("Won")){
+    //         player+=1;
+    //         alert(round);
+    //     }else if(round.includes("Lose")){
+    //         computer+=1;
+    //         alert(round);
+    //     }else{
+    //         alert(round);
+    //     }
+    // }
     if(player >computer){
         return `Waaal you Won by ${player} and the Opponent has ${computer}`;
     }else{
