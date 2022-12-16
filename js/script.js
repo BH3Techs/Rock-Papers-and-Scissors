@@ -34,7 +34,7 @@ function playRound(playerSelection, computerSelection){
                 case choice[0]:
                     return `You Lose! ${computerSelection} beat ${playerSelection}.`;
                 case choice[2]:
-                    return `You Won! ${playerSelection} beat ${computerSelection}.`;
+                    return `You Lose! ${computerSelection} beat ${playerSelection}.`;
             }
         }else{
             switch(computerSelection){
@@ -88,11 +88,17 @@ function playRound(playerSelection, computerSelection){
 // }
 
 const buttons = document.querySelectorAll('button');
+const results = document.querySelector('.results');
+
 buttons.forEach((button) =>{
     button.addEventListener('click',() =>{
-        playRound(button.id, computerSelection);
+        const result = playRound(button.innerText, computerChoice());
 
+        results.textContent = result;
     });
 });
+
+
+
 
 // console.log(playRound("ROCK",computerChoice()));
