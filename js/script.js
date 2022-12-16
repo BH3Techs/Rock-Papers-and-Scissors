@@ -64,27 +64,35 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game(){
-    let player = 0;
-    let computer = 0;
+// function game(){
+//     let player = 0;
+//     let computer = 0;
     
-    // for(let i = 0; i<5; i++){
-    //     const round = playRound(prompt("Enter you choice").toUpperCase, computerChoice());
-    //     if(round.includes("Won")){
-    //         player+=1;
-    //         alert(round);
-    //     }else if(round.includes("Lose")){
-    //         computer+=1;
-    //         alert(round);
-    //     }else{
-    //         alert(round);
-    //     }
-    // }
-    if(player >computer){
-        return `Waaal you Won by ${player} and the Opponent has ${computer}`;
-    }else{
-        return `Ooooh sorry you lost Opponent got ${computer} and you got ${player}`;
-    }
-}
+//     for(let i = 0; i<5; i++){
+//         const round = playRound(prompt("Enter you choice").toUpperCase, computerChoice());
+//         if(round.includes("Won")){
+//             player+=1;
+//             alert(round);
+//         }else if(round.includes("Lose")){
+//             computer+=1;
+//             alert(round);
+//         }else{
+//             alert(round);
+//         }
+//     }
+//     if(player >computer){
+//         return `Waaal you Won by ${player} and the Opponent has ${computer}`;
+//     }else{
+//         return `Ooooh sorry you lost Opponent got ${computer} and you got ${player}`;
+//     }
+// }
 
-console.log(playRound("ROCK",computerChoice()));
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) =>{
+    button.addEventListener('click',() =>{
+        playRound(button.id, computerSelection);
+
+    });
+});
+
+// console.log(playRound("ROCK",computerChoice()));
