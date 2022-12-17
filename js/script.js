@@ -36,7 +36,7 @@ function playRound(playerSelection, computerSelection){
                 case choice[0]:
                     return `You Win! ${playerSelection} beat ${computerSelection}.`;
                 case choice[2]:
-                    return `You Lose! ${computerSelection} beat ${playerSelection}.`;
+                    return `You Win! ${playerSelection} beat ${computerSelection}.`;
             }
         }else{
             switch(computerSelection){
@@ -97,7 +97,10 @@ const playerResult = document.createElement('label');
 const computerResult = document.createElement('label');
 const finalResult = document.createElement('label');
 
+playerLabel.classList.add('playerLabel');
 playerLabel.textContent = "YOU";
+
+computerLabel.classList.add('computerLabel');
 computerLabel.textContent ="COMPUTER";
 
 
@@ -105,8 +108,6 @@ computerLabel.textContent ="COMPUTER";
 buttons.forEach((button) =>{
     button.addEventListener('click',() =>{
         const result = playRound(button.innerText, computerChoice());
-        
-
         
         body.appendChild(playerLabel);
         body.appendChild(computerLabel)
