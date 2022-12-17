@@ -104,6 +104,7 @@ playerLabel.textContent = "YOU ";
 computerLabel.classList.add('computerLabel');
 computerLabel.textContent ="COMPUTER ";
 
+finalResult.setAttribute('id','final')
 
 
 buttons.forEach((button) =>{
