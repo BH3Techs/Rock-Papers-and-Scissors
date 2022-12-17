@@ -95,6 +95,7 @@ const playerLabel = document.createElement('label');
 const computerLabel = document.createElement('label');
 const playerResult = document.createElement('label');
 const computerResult = document.createElement('label');
+const finalResult = document.createElement('label');
 
 playerLabel.textContent = "YOU";
 computerLabel.textContent ="COMPUTER";
@@ -105,12 +106,8 @@ buttons.forEach((button) =>{
     button.addEventListener('click',() =>{
         const result = playRound(button.innerText, computerChoice());
         
-        if(result.includes('Won')){
-            player+=1;
-        }else{
-            computer+=1;
-        }
 
+        
         body.appendChild(playerLabel);
         body.appendChild(computerLabel)
 
@@ -120,12 +117,24 @@ buttons.forEach((button) =>{
         computerResult.textContent = computer;
 
         body.appendChild(playerResult);
-        body.appendChild(computerResult);
+        body.appendChild(computerResult);  
         
-        
+        if(player === 5|| computer === 5){
+            if(player >computer){
+                finalResult.textContent= `Waaal you Won by ${player} and the Opponent has ${computer}`;
+                body.appendChild(finalResult);
+                player =0;
+            }else{
+                finalResult.textContent= `Ooooh sorry you lost Opponent got ${computer} and you got ${player}`;
+                body.appendChild(finalResult);
+                player =0;
+            }
+        }else{
+            if(result.includes('Won')){
+                player+=1;
+            }else{
+                computer+=1;
+            }
+        }
     });
 });
-
-
-
-// console.log(playRound("ROCK",computerChoice()));
