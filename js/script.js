@@ -91,6 +91,7 @@ function playRound(playerSelection, computerSelection){
 const body = document.querySelector('body');
 const buttons = document.querySelectorAll('button');
 const results = document.querySelector('.results');
+const vs = document.querySelector('.vs');
 const playerLabel = document.createElement('label');
 const computerLabel = document.createElement('label');
 const playerResult = document.createElement('label');
@@ -98,10 +99,10 @@ const computerResult = document.createElement('label');
 const finalResult = document.createElement('label');
 
 playerLabel.classList.add('playerLabel');
-playerLabel.textContent = "YOU";
+playerLabel.textContent = "YOU ";
 
 computerLabel.classList.add('computerLabel');
-computerLabel.textContent ="COMPUTER";
+computerLabel.textContent ="COMPUTER ";
 
 
 
@@ -109,8 +110,8 @@ buttons.forEach((button) =>{
     button.addEventListener('click',() =>{
         const result = playRound(button.innerText, computerChoice());
         
-        body.appendChild(playerLabel);
-        body.appendChild(computerLabel)
+        vs.appendChild(playerLabel);
+        vs.appendChild(computerLabel)
 
         results.textContent = result;
  
@@ -138,7 +139,7 @@ buttons.forEach((button) =>{
         playerResult.textContent = player;
         computerResult.textContent = computer;
 
-        body.appendChild(playerResult);
-        body.appendChild(computerResult); 
+        playerLabel.appendChild(playerResult);
+        computerLabel.appendChild(computerResult); 
     });
 });
