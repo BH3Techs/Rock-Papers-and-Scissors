@@ -1,4 +1,6 @@
 const choice = ["ROCK", "PAPER", "SCISSOR"];
+let player = 0;
+let computer = 0;
 
 function computerChoice(){
     guessNumber = Math.floor(Math.random()*3);
@@ -86,18 +88,43 @@ function playRound(playerSelection, computerSelection){
 //         return `Ooooh sorry you lost Opponent got ${computer} and you got ${player}`;
 //     }
 // }
-
+const body = document.querySelector('body');
 const buttons = document.querySelectorAll('button');
 const results = document.querySelector('.results');
+const playerLabel = document.createElement('label');
+const computerLabel = document.createElement('label');
+const playerResult = document.createElement('label');
+const computerResult = document.createElement('label');
+
+playerLabel.textContent = "YOU";
+computerLabel.textContent ="COMPUTER";
+
+
 
 buttons.forEach((button) =>{
     button.addEventListener('click',() =>{
         const result = playRound(button.innerText, computerChoice());
+        
+        if(result.includes('Won')){
+            player+=1;
+        }else{
+            computer+=1;
+        }
+
+        body.appendChild(playerLabel);
+        body.appendChild(computerLabel)
 
         results.textContent = result;
+
+        playerResult.textContent = player;
+        computerResult.textContent = computer;
+
+        body.appendChild(playerResult);
+        body.appendChild(computerResult);
+        
+        
     });
 });
-
 
 
 
