@@ -34,7 +34,7 @@ function playRound(playerSelection, computerSelection){
         if(computerSelection == "PAPER"){
             switch(playerSelection){
                 case choice[0]:
-                    return `You Lose! ${computerSelection} beat ${playerSelection}.`;
+                    return `You Win! ${playerSelection} beat ${computerSelection}.`;
                 case choice[2]:
                     return `You Lose! ${computerSelection} beat ${playerSelection}.`;
             }
@@ -43,7 +43,7 @@ function playRound(playerSelection, computerSelection){
                 case choice[0]:
                     return `You Lose! ${computerSelection} beat ${playerSelection}.`;
                 case choice[2]:
-                    return `You Won! ${playerSelection} beat ${computerSelection}.`;
+                    return `You Lose! ${computerSelection} beat ${playerSelection}.`;
             }
         }
         //The SCISSOR choice
@@ -131,7 +131,7 @@ buttons.forEach((button) =>{
                 finalResult.textContent= `Ooooh sorry you lost Opponent got ${computer} and you got ${player}`;
                 body.appendChild(finalResult);
                 player =0;
-                com[uter = 0;]
+                computer = 0;
             }
         }
         playerResult.textContent = player;
