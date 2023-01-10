@@ -89,7 +89,7 @@ function playRound(playerSelection, computerSelection){
 //     }
 // }
 const body = document.querySelector('body');
-const buttons = document.querySelectorAll('.items');
+const items = document.querySelectorAll('.items');
 const results = document.querySelector('.results');
 const vs = document.querySelector('.vs');
 const playerLabel = document.createElement('label');
@@ -107,9 +107,9 @@ computerLabel.textContent ="COMPUTER ";
 finalResult.setAttribute('id','final')
 
 
-buttons.forEach((button) =>{
-    button.addEventListener('click',() =>{
-        const result = playRound(button.innerText, computerChoice());
+items.forEach((item) =>{
+    item.addEventListener('click',() =>{
+        const result = playRound(item.alt, computerChoice());
         
         vs.appendChild(playerLabel);
         vs.appendChild(computerLabel)
