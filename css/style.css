@@ -15,6 +15,7 @@ body{
     display: flex;
     justify-content: center;
     margin: 100px;
+
 }
 .vs{
     display: flex;
@@ -44,4 +45,12 @@ h1{
     border-style: solid;
     border-color: brown;
     border-radius: 50px;
+}
+.goals{
+    border-style: solid;
+    border-color: brown;
+    border-radius: 50px;
+    margin: 100px;
+    padding: 50px;
+    background-color: rgb(60, 66, 66);
 }
