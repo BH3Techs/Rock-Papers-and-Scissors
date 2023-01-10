@@ -89,7 +89,7 @@ function playRound(playerSelection, computerSelection){
 //     }
 // }
 const body = document.querySelector('body');
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.items');
 const results = document.querySelector('.results');
 const vs = document.querySelector('.vs');
 const playerLabel = document.createElement('label');
