@@ -36,19 +36,12 @@ button{
     
 
 }
-#ROCK{
-    background-image:
-}
-#PAPER{
-    
-}
-#SCISSOR{
-    
-}
 h1{
     display: flex;
     justify-content: center;
 }
-.itesm{
-    border-radius: 10px;
+.items{
+    border-style: solid;
+    border-color: brown;
+    border-radius: 50px;
 }
